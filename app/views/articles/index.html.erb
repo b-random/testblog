@@ -1,0 +1,21 @@
+<h2>Articles</h2>
+
+<table style="margin-bottom: 30px">
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>View<th>
+  <tr>
+
+  <% @articles.each do |article| %>
+  <tr>
+    <td width="350px"><%= article.title %></td>
+    <td width="650px"><%= article.description %></td>
+    <td><%= link_to "Show", article_path(article) %></td>
+  <tr>
+  <% end %>
+</table>
+
+<tr>
+  <th><%= link_to 'Home', root_path %></th>
+</tr>

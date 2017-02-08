@@ -1,0 +1,9 @@
+<h2>Selected Article</h2>
+<p><b>Title:</b><i><%= @article.title %></i></p>
+<p><b>Description:</b><i><%= @article.description %></i></p>
+<tr style="list-style-type:none">
+  <th><%= link_to 'Home', root_path %></th>
+  <th><%= link_to 'New Post', new_article_path %></th>
+  <th><%= link_to 'Edit Post', edit_article_path %></th>
+  <th><%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %></th>
+</tr>

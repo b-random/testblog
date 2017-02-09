@@ -1,0 +1,9 @@
+<% if obj.errors.any? %>
+  <h3 style="color:red">Oops!</h3>
+  <%= pluralize(obj.errors.count, 'error') %>
+  <% obj.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+<% end %>
+
+<!--obj allows use with any controller-->
